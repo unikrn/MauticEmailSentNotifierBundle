@@ -9,17 +9,17 @@
 */
 namespace MauticPlugin\MauticEmailSentNotifierBundle\EventListener;
 
-use Mautic\CoreBundle\EventListener\CommonSubscriber;
 use Mautic\CoreBundle\Helper\BuilderTokenHelper;
 use Mautic\EmailBundle\EmailEvents;
 use Mautic\EmailBundle\Event\EmailBuilderEvent;
 use Mautic\EmailBundle\Event\EmailSendEvent;
 use Mautic\LeadBundle\Helper\TokenHelper;
 use MauticPlugin\MauticEmailSentNotifierBundle\Helper\EmailSentHelper;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 /**
 * Class EmailSubscriber.
 */
-class CustomEmailSubscriber extends CommonSubscriber
+class CustomEmailSubscriber implements EventSubscriberInterface
 {
 
     /**
